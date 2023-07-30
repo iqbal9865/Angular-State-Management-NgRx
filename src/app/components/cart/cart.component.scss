@@ -16,4 +16,10 @@
   color: black;
   font-weight: 700;
   border-radius: 7px;
+  margin: 10px 0;
+  button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
 }

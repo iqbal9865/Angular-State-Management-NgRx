@@ -4,7 +4,10 @@
       <h2>Cart Items: {{ cartItems.length }}</h2>
       <div>
         <div *ngFor="let item of cartItems">
-          <p class="py-3 single-cart-item">{{ item.strCategory }}</p>
+          <div class="py-3 single-cart-item d-flex-between">
+            <p>{{ item.strCategory }}</p>
+            <button (click)="removeFromCart(item)"><img src="../../../assets/remove.png" style="width: 25px;" alt=""></button>
+          </div>
         </div>
       </div>
     </div>

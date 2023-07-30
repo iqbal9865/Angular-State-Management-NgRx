@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { selectCartItems } from 'src/app/selectors/cart.selector';
+import { removeFromCart } from 'src/app/actions/cart.action';
 
 @Component({
   selector: 'app-cart',
@@ -14,5 +15,8 @@ export class CartComponent {
     this.store.pipe(select(selectCartItems)).subscribe((cartItems) => {
       this.cartItems = cartItems;
     });
+  }
+  removeFromCart(product: any) {
+    this.store.dispatch(removeFromCart({ itemId: product.idCategory }));
   }
 }

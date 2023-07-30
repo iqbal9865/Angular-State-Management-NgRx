@@ -38,7 +38,6 @@ export class ProductsComponent implements OnInit {
   }
 
   isInCart(product: any): boolean {
-
-    return this.cartItems.some((item) => item.idCategory == product.idCategory);
+    return this.cartItems.some((item) => item.idCategory === product.idCategory);
   }
 }
