@@ -1,12 +1,16 @@
 <div class="cart-container">
-  <h2> Cart Items: </h2>
-<div *ngIf="cartItems.length > 0">
-  <ul>
-    <li *ngFor="let item of cartItems">{{ item.strCategory }}</li>
-  </ul>
-</div>
-<div *ngIf="cartItems.length === 0">
-  <p>Your cart is empty.</p>
-</div>
-
+  <div class="cart">
+    <div *ngIf="cartItems.length > 0">
+      <h2>Cart Items: {{ cartItems.length }}</h2>
+      <div>
+        <div *ngFor="let item of cartItems">
+          <p class="py-3 single-cart-item">{{ item.strCategory }}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="cartItems.length === 0">
+      <p>Your cart is empty.</p>
+    </div>
+    <button class="btn btn-yellow" routerLink="/">Back</button>
+  </div>
 </div>

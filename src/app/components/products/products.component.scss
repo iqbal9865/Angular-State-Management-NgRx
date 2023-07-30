@@ -8,6 +8,9 @@
   .single-product {
     margin: 10px;
     padding: 20px;
+    img {
+      max-width: 300px;
+    }
     box-shadow: 0 0 8px lightgray;
     .product-title {
       font-size: 25px;
@@ -33,13 +36,22 @@
   color: white;
   background-color: orangered;
 }
-@media (max-width: 1092px) {
+.shopping-cart-img {
+  width: 20px;
+}
+
+@media (max-width: 1024px) {
+  .all-products-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+
+
+@media (max-width: 768px) {
   .all-products-container {
     display: grid;
     grid-template-columns: auto;
-
-  }
-  .product-wrapper {
-    margin: 200px 0;
   }
 }
