@@ -1,3 +1,4 @@
+
 .title {
   font-size: 30px;
 }
@@ -31,4 +32,14 @@
 .btn-yellow {
   color: white;
   background-color: orangered;
+}
+@media (max-width: 1092px) {
+  .all-products-container {
+    display: grid;
+    grid-template-columns: auto;
+
+  }
+  .product-wrapper {
+    margin: 200px 0;
+  }
 }
