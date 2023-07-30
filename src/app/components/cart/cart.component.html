@@ -1,0 +1,12 @@
+<div class="cart-container">
+  <h2> Cart Items: </h2>
+<div *ngIf="cartItems.length > 0">
+  <ul>
+    <li *ngFor="let item of cartItems">{{ item.strCategory }}</li>
+  </ul>
+</div>
+<div *ngIf="cartItems.length === 0">
+  <p>Your cart is empty.</p>
+</div>
+
+</div>
