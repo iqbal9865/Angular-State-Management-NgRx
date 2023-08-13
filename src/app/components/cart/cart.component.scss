@@ -1,3 +1,4 @@
+@import '../../app.component.scss';
 @import '../products/products.component.scss';
 .cart-container {
   display: flex;
@@ -10,6 +11,13 @@
   width: 50%;
   box-shadow: 0 0 8px lightgray;
 }
+.cart-image-container {
+  width: 80px;
+  .cart-image {
+    width: 100%;
+  }
+}
+
 .single-cart-item {
   background: rgb(121, 226, 121);
   padding: 12px 20px;

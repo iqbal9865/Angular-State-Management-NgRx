@@ -16,8 +16,8 @@
         <div class="items-center">
           <img [src]="product.strCategoryThumb" alt="product-img" />
         </div>
-        <div class="d-flex-between">
-          <h5 class="product-title">{{ product.strCategory }}</h5>
+        <div class="d-flex-between flex-wrap margin-y-2">
+          <h6 class="product-title">{{ product.strCategory }}</h6>
           <button
             class="btn btn-yellow"
             *ngIf="!isInCart(product)"

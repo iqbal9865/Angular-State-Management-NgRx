@@ -1,18 +1,32 @@
 <div class="cart-container">
   <div class="cart">
     <div *ngIf="cartItems.length > 0">
-      <h2>Cart Items: {{ cartItems.length }}</h2>
+      <h2 class="margin-y-2">Cart Items: {{ cartItems.length }}</h2>
       <div>
         <div *ngFor="let item of cartItems">
           <div class="py-3 single-cart-item d-flex-between">
             <p>{{ item.strCategory }}</p>
-            <button (click)="removeFromCart(item)"><img src="../../../assets/remove.png" style="width: 25px;" alt=""></button>
+            <div class="cart-image-container">
+              <img
+                class="cart-image"
+                [src]="item.strCategoryThumb"
+                alt="strCategoryThumb
+            "
+              />
+            </div>
+            <button (click)="removeFromCart(item)">
+              <img
+                src="../../../assets/remove.png"
+                style="width: 25px"
+                alt=""
+              />
+            </button>
           </div>
         </div>
       </div>
     </div>
     <div *ngIf="cartItems.length === 0">
-      <p>Your cart is empty.</p>
+      <p class="margin-y-2">Your cart is empty.</p>
     </div>
     <button class="btn btn-yellow" routerLink="/">Back</button>
   </div>

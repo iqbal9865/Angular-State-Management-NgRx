@@ -7,6 +7,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { cartReducer } from './reducers/cart.reducer';
+import { LoginModule } from './modules/login/login.module';
 
 @NgModule({
   declarations: [AppComponent, ProductsComponent, CartComponent],
@@ -14,6 +15,7 @@ import { cartReducer } from './reducers/cart.reducer';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    LoginModule,
     StoreModule.forRoot({ cart: cartReducer }),
   ],
   providers: [],

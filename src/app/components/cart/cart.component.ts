@@ -14,6 +14,7 @@ export class CartComponent {
   constructor(private store: Store) {
     this.store.pipe(select(selectCartItems)).subscribe((cartItems) => {
       this.cartItems = cartItems;
+      console.log(cartItems)
     });
   }
   removeFromCart(product: any) {

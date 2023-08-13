@@ -1,19 +1,19 @@
-
+@import '../../app.component.scss';
 .title {
   font-size: 30px;
 }
 .all-products-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
   .single-product {
     margin: 10px;
     padding: 20px;
     img {
-      max-width: 300px;
+      max-width: 200px;
     }
     box-shadow: 0 0 8px lightgray;
     .product-title {
-      font-size: 25px;
+      font-size: 20px;
     }
   }
 }
@@ -24,6 +24,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .btn {
   border: 0;
@@ -43,15 +46,21 @@
 @media (max-width: 1024px) {
   .all-products-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
-
 
 @media (max-width: 768px) {
   .all-products-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 540px) {
+  .all-products-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+

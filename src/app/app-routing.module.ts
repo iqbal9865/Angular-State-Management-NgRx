@@ -6,7 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'products', pathMatch: 'full' },
   { path: 'products', component: ProductsComponent },
-  { path: 'carts', component: CartComponent }
+  { path: 'carts', component: CartComponent },
+  {
+    path: 'login',
+    loadChildren: () => import('./modules/login/login.module').then((module) => module.LoginModule)
+  }
 ];
 
 @NgModule({
